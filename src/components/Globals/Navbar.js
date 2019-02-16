@@ -16,7 +16,7 @@ export default class Navbar extends Component {
                 text: 'Home'
             }, {
                 id: 1,
-                path: '/about',
+                path: '/about/',
                 text: 'About'
             }
         ]
@@ -42,13 +42,13 @@ export default class Navbar extends Component {
                         { 
                             this.state.links.map(link => {
                                 return (
-                                    <li key={link.id} className="nav-item"><Link to={link.to} className="nav-link text-capitalize">{link.text}</Link></li>
+                                    <li key={link.id} className="nav-item"><Link to={link.path} className="nav-link text-capitalize">{link.text}</Link></li>
                                 )
                             
                             }) 
                         }
                         <li className="nav-item ml-sm-5">
-                            <FaCartArrowDown className="cart-icon"/>
+                            <FaCartArrowDown className="cart-icon" size={30} style={{ color: 'orange'}}/>
                         </li>
                     </ul> 
                 </div>

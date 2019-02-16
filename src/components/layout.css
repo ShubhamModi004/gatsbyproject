@@ -1,6 +1,6 @@
 :root{
-  --manBrown: #2d1ef1;
-  --mainYellow: #ff9e09;
+  --mainBrown: #2d1e1f;
+  --mainYellow: rgb(255, 158, 9);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -25,3 +25,40 @@ h1,h2,h3,h4,h5,h6{
 .cart-icon{
   cursor: pointer;
 }
+
+.default-background,.about-background{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 158, 9, 0.5),rgba(255, 158, 9, 0.5));
+  background-position: center;
+  background-size: cover;
+}
+
+.about-background{
+  min-height: 60vh;
+}
+
+.btn-yellow{
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+}
+
+.btn-yellow:hover{
+  background: var(--mainYellow);
+  color: #fff;
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 2.5rem;
+      padding-left: .5rem;
+  }
+}
+
+.footer{
+  background: var(--mainBrown);
+  color: var(--mainYellow);
+}
+

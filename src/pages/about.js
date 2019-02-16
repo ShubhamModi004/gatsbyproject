@@ -12,19 +12,24 @@ import SEO from "../components/seo"
 //   FaGulp
 // } from 'react-icons/fa';
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <BackgroundSection img={data.img.childImageSharp.fluid} title="Coffee Shop" styleClass="default-background"/>
-    <Title title="Our Story"/>
-    <Info />
-    <Footer />
-  </Layout>
+const AboutPage = ({ data }) => (
+    <Layout>
+        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <BackgroundSection 
+            img={data.img.childImageSharp.fluid} 
+            title="About Us" 
+            styleClass="about-background"
+
+        />
+        <Title title="Our Story" />
+        <Info />
+        <Footer />
+    </Layout>
 )
 
 export const query = graphql`
 {
-  img:file(relativePath:{eq:"default-background.jpeg"}){
+  img:file(relativePath:{eq:"about-background.jpeg"}){
     childImageSharp {
       fluid{
         ...GatsbyImageSharpFluid_tracedSVG
@@ -34,4 +39,4 @@ export const query = graphql`
 }
 `
 
-export default IndexPage
+export default AboutPage;
